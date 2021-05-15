@@ -4,13 +4,11 @@ var wl;
 !function(){if("Promise"in window){var e,t,r=document,n=function(){return r.createElement("link")},o=new Set,a=n(),i=a.relList&&a.relList.supports&&a.relList.supports("prefetch"),s=location.href.replace(/#[^#]+$/,"");o.add(s);var c=function(e){var t=location,r="http:",n="https:";if(e&&e.href&&e.origin==t.origin&&[r,n].includes(e.protocol)&&(e.protocol!=r||t.protocol!=n)){var o=e.pathname;if(!(e.hash&&o+e.search==t.pathname+t.search||".html"!=o.substr(-5)&&".html"!=o.substr(-5)&&"/"!=o.substr(-1)))return!0}},u=function(e){var t=e.replace(/#[^#]+$/,"");if(!o.has(t)){if(i){var a=n();a.rel="prefetch",a.href=t,r.head.appendChild(a)}else{var s=new XMLHttpRequest;s.open("GET",t,s.withCredentials=!0),s.send()}o.add(t)}},f=function(e){return e.target.closest("a")},p=function(t){var r=t.relatedTarget;r&&f(t)==r.closest("a")||e&&(clearTimeout(e),e=void 0)},l={capture:!0,passive:!0};r.addEventListener("touchstart",function(e){t=performance.now();var r=f(e);c(r)&&u(r.href)},l),r.addEventListener("mouseover",function(r){if(!(performance.now()-t<1200)){var n=f(r);c(n)&&(n.addEventListener("mouseout",p,{passive:!0}),e=setTimeout(function(){u(n.href),e=void 0},80))}},l)}}();
 
 $(function(){
-r=function(){dpi=window.devicePixelRatio;var e=document.querySelector('.js4');e.setAttribute('src',(dpi>1)?'images/51d4d324-ca75-4c95-bcc1-9df314a353c1-1386.jpeg':'images/51d4d324-ca75-4c95-bcc1-9df314a353c1-693.jpeg');
-};
+r=function(){dpi=window.devicePixelRatio;var e=document.querySelector('.js1');e.setAttribute('src',(dpi>1)?'images/jie-ping2021-05-12-22.23.41-388.jpg':'images/jie-ping2021-05-12-22.23.41-194.jpg');
+var e=document.querySelector('.js2');e.setAttribute('src',(dpi>1)?'images/young-3914480_1920-1900.jpg':'images/young-3914480_1920-950.jpg');};
 if(!window.HTMLPictureElement){r();}
 (function(){$('a[href^="#"]:not(.allowConsent,.noConsent,.denyConsent,.removeConsent)').each(function(i,e){$(e).click(function(){var t=e.hash.length>1?$('[name="'+e.hash.slice(1)+'"]').offset().top:0;return $("html, body").animate({scrollTop:t},400),!1})})})();
-wl=new woolite();
-wl.init();
-wl.addAnimation($('.js5')[0], "10.00s", "0.00s", 30, 100);
-wl.start();
+initMenu($('#m1')[0]);
+$('.s5').Stickyfill();
 
 });
